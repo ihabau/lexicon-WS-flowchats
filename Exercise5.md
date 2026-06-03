@@ -36,4 +36,8 @@ OUTPUT --> E((END))
 
 ```mermaid
 flowchart TD
+S((START)) --> INPUT[/INPUT: p, r, t/]
+INPUT --> CALC["si = (p × r × t) / 100"]
+CALC --> OUTPUT[/PRINT: si/]
+OUTPUT --> E((END))
 ```

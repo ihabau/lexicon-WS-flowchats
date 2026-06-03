@@ -1,26 +1,26 @@
-## 5. Simple Interest Calculator
+## 6. Average Temperature Calculation
 
-Create an algorithm and flowchart for a program that calculates simple
-interest using the formula:
-
-**si = (p × r × t) / 100**
-
-- **p = principal** → original amount of money
-- **r = rate of interest** → percentage per year
-- **t = time** → number of years
+Write the algorithm and draw the flowchart for a program that takes the
+temperature of 7 days, finds the average temperature, and displays it.
 
 ---
 
 **input style:**
+
 ### ✔ Pseudocode
 
 ```
 START
-input: p = original amount of money,
-r = rate of interest,
-t = time in years
-SET si = (p × r × t) / 100
-PRINT: si
+  SET day = 1
+  SET weekTemp = 0
+  SET avrTemp = 0
+  WHILE day <= 7
+    INPUT temp
+    CALC weekTemp += temp
+    day += 1
+  ENDWHILE
+  SET avrTemp = weekTemp / 7
+  PRINT avrTemp
 END
 ```
 
@@ -28,12 +28,26 @@ END
 
 ```mermaid
 flowchart LR
-S((START)) --> INPUT[/INPUT: p, r, t/]
-INPUT --> CALC["si = (p × r × t) / 100"]
-CALC --> OUTPUT[/PRINT: si/]
-OUTPUT --> E((END))
+S((START)) --> DATA{{SET: day = 1, weekTemp = 0, avrTemp = 0}}
+DATA --> LOOP{day <= 7}
+LOOP -- NO -->CALCAVR[avrTemp = weekTemp / 7]
+CALCAVR --> PRINT[PRINT: avrTemp]
+PRINT --> E((END))
+LOOP -- YES --> GETTEMP[/get temp/]
+GETTEMP --> CALC[weekTemp += temp]
+CALC --> INC[/day += 1/]
+INC --> LOOP
 ```
 
 ```mermaid
 flowchart TD
+S((START)) --> DATA{{SET: day = 1, weekTemp = 0, avrTemp = 0}}
+DATA --> LOOP{day <= 7}
+LOOP -- NO -->CALCAVR[avrTemp = weekTemp / 7]
+CALCAVR --> PRINT[PRINT: avrTemp]
+PRINT --> E((END))
+LOOP -- YES --> GETTEMP[/get temp/]
+GETTEMP --> CALC[weekTemp += temp]
+CALC --> INC[/day += 1/]
+INC --> LOOP
 ```
