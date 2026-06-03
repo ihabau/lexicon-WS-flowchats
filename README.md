@@ -1,0 +1,20 @@
+﻿Lexicon workshop 3: flowcharts and pseudocode.  
+Porfolio.
+
+## 🗺️ Project Roadmap
+
+See our active [To-Do List](./Algorithm.flowchart-workshop.md) for upcoming features and task tracking.
+
+to do list.
+Exercise 1 [Excercise 1](./Exercise1.md)
+Exercise 2 [Excercise 2](./Exercise2.md)
+Exercise 3 [Excercise 3](./Exercise3.md)
+Exercise 4 [Excercise 4](./Exercise4.md)
+Exercise 5 [Excercise 5](./Exercise5.md)
+
+**Tips:**
+((Text)) is start/End  
+\[/Text/\] is input/output  
+{Text} is logic  
+(Text( is storage  
+\[Text\] is process Example changing variables or math operation.
