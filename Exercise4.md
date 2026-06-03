@@ -1,26 +1,22 @@
-## 5. Simple Interest Calculator
+## 4. Positive, Negative, or Zero Check
 
-Create an algorithm and flowchart for a program that calculates simple
-interest using the formula:
-
-**si = (p × r × t) / 100**
-
-- **p = principal** → original amount of money
-- **r = rate of interest** → percentage per year
-- **t = time** → number of years
+Write the algorithm and flowchart to input a number and display whether
+it is positive, negative, or zero.
 
 ---
 
-**input style:**
 ### ✔ Pseudocode
 
 ```
 START
-input: p = original amount of money,
-r = rate of interest,
-t = time in years
-SET si = (p × r × t) / 100
-PRINT: si
+  INPUT: number
+  IF number < 0
+    PRINT: negative
+  ELSEIF: number > 0
+    PRINT: positive
+  ELSE
+    PRINT: zero
+  ENDIF
 END
 ```
 
@@ -28,12 +24,16 @@ END
 
 ```mermaid
 flowchart LR
-S((START)) --> INPUT[/INPUT: p, r, t/]
-INPUT --> CALC["si = (p × r × t) / 100"]
-CALC --> OUTPUT[/PRINT: si/]
-OUTPUT --> E((END))
+S((START)) --> IN[/input: number/]
+IN --> IF1{IF: number < 0} -- YES --> OUTN[PRINT: negative number.] --> E((END))
+IF1 -- NO --> IF2{IF number > 0} -- YES --> OUTP[PRINT: positive number.] --> E
+IF2 -- NO --> OUT0[PRINT: number zero.] --> E
 ```
 
 ```mermaid
 flowchart TD
+S((START)) --> IN[/input: number/]
+IN --> IF1{IF: number < 0} -- YES --> OUTN[PRINT: negative number.] --> E((END))
+IF1 -- NO --> IF2{IF number > 0} -- YES --> OUTP[PRINT: positive number.] --> E
+IF2 -- NO --> OUT0[PRINT: number zero.] --> E
 ```
