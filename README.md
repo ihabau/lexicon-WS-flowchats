@@ -11,6 +11,8 @@ Exercise 2 [Excercise 2](./Exercise2.md)
 Exercise 3 [Excercise 3](./Exercise3.md)
 Exercise 4 [Excercise 4](./Exercise4.md)
 Exercise 5 [Excercise 5](./Exercise5.md)
+Exercise 6 [Excercise 6](./Exercise6.md)
+Exercise 7 [Excercise 7](./Exercise7.md)
 
 **Tips:**
 ((Text)) is start/End  
