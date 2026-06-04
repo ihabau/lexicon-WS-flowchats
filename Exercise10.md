@@ -26,7 +26,7 @@ flowchart LR
 S((START)) --> IN[/INPUT: amount/]
 IN --> SET{{finalPrice = amount}}
 SET --> IF{amount > 1000}
-IF -- YES --> RES1{{finalPrice = amount * 0.9}}
+IF -- YES --> RES1[finalPrice = amount * 0.9]
 RES1 --> OUT[/PRINT: finalPrice/]
 IF -- NO --> OUT --> E((END))
 ```
@@ -36,7 +36,7 @@ flowchart TD
 S((START)) --> IN[/INPUT: amount/]
 IN --> SET{{finalPrice = amount}}
 SET --> IF{amount > 1000}
-IF -- YES --> RES1{{finalPrice = amount * 0.9}}
+IF -- YES --> RES1[finalPrice = amount * 0.9]
 RES1 --> OUT[/PRINT: finalPrice/]
 IF -- NO --> OUT --> E((END))
 ```
