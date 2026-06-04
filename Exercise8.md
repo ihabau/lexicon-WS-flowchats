@@ -26,13 +26,13 @@ END
 ```mermaid
 flowchart LR
 S((START)) --> IN[/input avrMark/]
-IN --> IF{avrMark > 50} -- YES --> OUTP[/Pass/] --> E((END))
-IF -- NO --> OUTF[/Fail/] --> E
+IN --> IF{avrMark > 50} -- YES --> OUTP[/PRINT: Pass/] --> E((END))
+IF -- NO --> OUTF[/PRINT: Fail/] --> E
 ```
 
 ```mermaid
 flowchart TD
 S((START)) --> IN[/input avrMark/]
-IN --> IF{avrMark > 50} -- YES --> OUTP[/Pass/] --> E((END))
-IF -- NO --> OUTF[/Fail/] --> E
+IN --> IF{avrMark > 50} -- YES --> OUTP[/PRINT: Pass/] --> E((END))
+IF -- NO --> OUTF[/PRINT: Fail/] --> E
 ```

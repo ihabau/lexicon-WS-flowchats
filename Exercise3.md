@@ -24,19 +24,13 @@ END
 ```mermaid
 flowchart LR
 S((START)) --> INPUT[/input: number/]
-
 INPUT --> COUNTER[counter = 1]
-
 COUNTER --> LOOP{WHILE: counter <= 10}
-
+LOOP -- NO --> E((END))
 LOOP -- YES --> CALC[res = input * counter]
-
 CALC --> OUTPUT[/print: res/]
 OUTPUT --> INC[counter += 1]
-
 INC -- LOOP --> LOOP
-
-LOOP -- NO --> E((END))
 ```
 
 ```mermaid
