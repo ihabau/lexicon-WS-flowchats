@@ -25,15 +25,15 @@ END
 ```mermaid
 flowchart LR
 S((START)) --> IN[/input: number/]
-IN --> IF1{IF: number < 0} -- YES --> OUTN[/PRINT: negative number./] --> E((END))
-IF1 -- NO --> IF2{IF number > 0} -- YES --> OUTP[/PRINT: positive number./] --> E
-IF2 -- NO --> OUT0[/PRINT: number zero./] --> E
+IN --> IF1{IF: number < 0} -- YES --> OUTN[PRINT: negative number.] --> E((END))
+IF1 -- NO --> IF2{IF number > 0} -- YES --> OUTP[PRINT: positive number.] --> E
+IF2 -- NO --> OUT0[PRINT: number zero.] --> E
 ```
 
 ```mermaid
 flowchart TD
 S((START)) --> IN[/input: number/]
-IN --> IF1{IF: number < 0} -- YES --> OUTN[/PRINT: negative number./] --> E((END))
-IF1 -- NO --> IF2{IF number > 0} -- YES --> OUTP[/PRINT: positive number./] --> E
-IF2 -- NO --> OUT0[/PRINT: number zero./] --> E
+IN --> IF1{IF: number < 0} -- YES --> OUTN[PRINT: negative number.] --> E((END))
+IF1 -- NO --> IF2{IF number > 0} -- YES --> OUTP[PRINT: positive number.] --> E
+IF2 -- NO --> OUT0[PRINT: number zero.] --> E
 ```

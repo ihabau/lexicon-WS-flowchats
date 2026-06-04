@@ -12,6 +12,7 @@ interest using the formula:
 ---
 
 **input style:**
+
 ### ✔ Pseudocode
 
 ```

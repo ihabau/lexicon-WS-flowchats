@@ -11,6 +11,15 @@ others, then displays the bonus and total salary.
 
 ```
 START
+  INPUT: sal, years
+  SET: bonus, totalSal
+  IF: years >= 5
+    bonus = sal * 0.1
+  ELSE:
+    bonus = sal * 0.05
+  ENDIF
+  totalSal = sal * 09
+  PRINT: totalSal, bonus
 END
 ```
 
@@ -18,8 +27,22 @@ END
 
 ```mermaid
 flowchart LR
+S((START)) --> IN[/Input: sal, years/]
+IN --> SET[SET: bonus = 0, totalSal = 0]
+SET --> IF{years >= 5}
+IF -- YES --> calc10["`SET:bonus = sal * 0.1
+totalSal = sal + bonus`"] --> OUT[/PRINT: totalSal, bonus/] --> E((END))
+IF -- NO --> calc05["`SET:bonus = sal * 0.05
+totalSal = sal + bonus`"] --> OUT
 ```
 
 ```mermaid
 flowchart TD
+S((START)) --> IN[/Input: sal, years/]
+IN --> SET[SET: bonus = 0, totalSal = 0]
+SET --> IF{years >= 5}
+IF -- YES --> calc10["`SET:bonus = sal * 0.1
+totalSal = sal + bonus`"] --> OUT[/PRINT: totalSal, bonus/] --> E((END))
+IF -- NO --> calc05["`SET:bonus = sal * 0.05
+totalSal = sal + bonus`"] --> OUT
 ```

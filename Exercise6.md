@@ -28,10 +28,10 @@ END
 
 ```mermaid
 flowchart LR
-S((START)) --> DATA{{SET: day = 1, weekTemp = 0, avrTemp = 0}}
+S((START)) --> DATA[SET: day = 1, weekTemp = 0, avrTemp = 0]
 DATA --> LOOP{day <= 7}
 LOOP -- NO -->CALCAVR[avrTemp = weekTemp / 7]
-CALCAVR --> PRINT[/PRINT: avrTemp/]
+CALCAVR --> PRINT[PRINT: avrTemp]
 PRINT --> E((END))
 LOOP -- YES --> GETTEMP[/get temp/]
 GETTEMP --> CALC[weekTemp += temp]
@@ -41,10 +41,10 @@ INC --> LOOP
 
 ```mermaid
 flowchart TD
-S((START)) --> DATA{{SET: day = 1, weekTemp = 0, avrTemp = 0}}
+S((START)) --> DATA[SET: day = 1, weekTemp = 0, avrTemp = 0]
 DATA --> LOOP{day <= 7}
 LOOP -- NO -->CALCAVR[avrTemp = weekTemp / 7]
-CALCAVR --> PRINT[/PRINT: avrTemp/]
+CALCAVR --> PRINT[PRINT: avrTemp]
 PRINT --> E((END))
 LOOP -- YES --> GETTEMP[/get temp/]
 GETTEMP --> CALC[weekTemp += temp]

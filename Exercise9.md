@@ -32,8 +32,8 @@ END
 flowchart LR
 S((START)) --> IN[/input number/]
 IN --> IFUD{if number <= 0} -- YES --> OUTUN[/PRINT: undefined factorial/]
-IFUD -- NO --> SET{{"`SET: res = number,
-counter = number`"}}
+IFUD -- NO --> SET["`SET: res = number,
+counter = number`"]
 SET --> LOOP{counter > 1} -- NO --> PRINT[/print: res/] --> E((END))
 LOOP -- YES --> INC[counter -= 1] --> CALC[res = res * counter]
 CALC --> LOOP
@@ -43,8 +43,8 @@ CALC --> LOOP
 flowchart TD
 S((START)) --> IN[/input number/]
 IN --> IFUD{if number <= 0} -- YES --> OUTUN[/PRINT: undefined factorial/]
-IFUD -- NO --> SET{{"`SET: res = number,
-counter = number`"}}
+IFUD -- NO --> SET["`SET: res = number,
+counter = number`"]
 SET --> LOOP{counter > 1} -- NO --> PRINT[/print: res/] --> E((END))
 LOOP -- YES --> INC[counter -= 1] --> CALC[res = res * counter]
 CALC --> LOOP

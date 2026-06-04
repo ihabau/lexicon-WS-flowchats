@@ -11,6 +11,12 @@ Applies"**.
 
 ```
 START
+  INPUT: amount
+  IF: amount > 500
+    PRINT: Free delivery.
+  ELSE
+    PRINT: Delivery charge applies.
+  ENDIF
 END
 ```
 
@@ -18,8 +24,20 @@ END
 
 ```mermaid
 flowchart LR
+s((start)) --> in[/input: amount/]
+in --> if{amount > 500}
+if == yes -->out1[/print: free delivery./]
+if == no -->out2[/print: delivery charge applies./]
+out1 --> E((end))
+out2 --> E
 ```
 
 ```mermaid
 flowchart TD
+s((start)) --> in[/input: amount/]
+in --> if{amount > 500}
+if == yes -->out1[/print: free delivery./]
+if == no -->out2[/print: delivery charge applies./]
+out1 --> E((end))
+out2 --> E
 ```
